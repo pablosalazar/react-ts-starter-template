@@ -28,4 +28,11 @@ export default defineConfig([
       "simple-import-sort/exports": "error",
     },
   },
+  // Override for Shadcn UI components only
+  {
+    files: ["src/components/ui/**/*.{ts,tsx}"],
+    rules: {
+      "react-refresh/only-export-components": "off", // Disable for Shadcn components
+    },
+  },
 ]);
